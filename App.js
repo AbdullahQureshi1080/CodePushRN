@@ -5,6 +5,7 @@
  * @format
  * @flow strict-local
  */
+import codePush from 'react-native-code-push';
 
 import React from 'react';
 import type {Node} from 'react';
@@ -109,4 +110,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default App;
+export default codePush(App);
