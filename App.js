@@ -71,20 +71,12 @@ const App: () => Node = () => {
           style={{
             backgroundColor: isDarkMode ? Colors.black : Colors.white,
           }}>
-          <Section title="Step One">
-            Edit <Text style={styles.highlight}>App.js</Text> to change this
-            screen and then come back to see your edits.
-          </Section>
-          <Section title="See Your Changes">
-            <ReloadInstructions />
-          </Section>
-          <Section title="Debug">
-            <DebugInstructions />
-          </Section>
-          <Section title="Learn More">
-            Read the docs to discover what to do next:
-          </Section>
-          <LearnMoreLinks />
+          <Section title="CODE PUSH REACT NATIVE">Over the air updates</Section>
+          <Text>Let's get these updates out in the world</Text>
+          <Text>This is so cool</Text>
+          <Section title="New Build">New Build</Section>
+          <Section title="New Build">New Staging Build</Section>
+          <Section title="New Build">New Production Build</Section>
         </View>
       </ScrollView>
     </SafeAreaView>

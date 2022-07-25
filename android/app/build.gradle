@@ -156,6 +156,14 @@ android {
             keyAlias 'androiddebugkey'
             keyPassword 'android'
         }
+         release {
+            if (project.hasProperty('MYAPP_UPLOAD_STORE_FILE')) {
+                storeFile file(MYAPP_UPLOAD_STORE_FILE)
+                storePassword MYAPP_UPLOAD_STORE_PASSWORD
+                keyAlias MYAPP_UPLOAD_KEY_ALIAS
+                keyPassword MYAPP_UPLOAD_KEY_PASSWORD
+            }
+        }
     }
     buildTypes {
         debug {
@@ -164,11 +172,27 @@ android {
         release {
             // Caution! In production, you need to generate your own keystore file.
             // see https://reactnative.dev/docs/signed-apk-android.
-            signingConfig signingConfigs.debug
+            resValue "string", "CodePushDeploymentKey",  project.env.get("CODE_PUSH_PRODUCTION_KEY")
+            signingConfig signingConfigs.release
             minifyEnabled enableProguardInReleaseBuilds
             proguardFiles getDefaultProguardFile("proguard-android.txt"), "proguard-rules.pro"
         }
+        releaseStaging {
+            resValue "string", "CodePushDeploymentKey",  project.env.get("CODE_PUSH_STAGING_KEY")
+            signingConfig signingConfigs.release
+            minifyEnabled enableProguardInReleaseBuilds
+            proguardFiles getDefaultProguardFile("proguard-android.txt"), "proguard-rules.pro"
+            matchingFallbacks = ['release']
+        }
+        releaseProduction{
+            resValue "string", "CodePushDeploymentKey",  project.env.get("CODE_PUSH_PRODUCTION_KEY")
+            signingConfig signingConfigs.release
+            minifyEnabled enableProguardInReleaseBuilds
+            proguardFiles getDefaultProguardFile("proguard-android.txt"), "proguard-rules.pro"
+            matchingFallbacks = ['release']
+        }
     }
+
 
     // applicationVariants are e.g. debug, release
     applicationVariants.all { variant ->

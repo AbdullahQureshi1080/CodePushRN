@@ -1,6 +1,7 @@
 <resources>
     <string name="app_name">CodePushRN</string>
-     <string moduleConfig="true" name="CodePushDeploymentKey">KmOmvzs0oYgl6JRvUEozz92ixZMwOB90-oWNA</string>
+    <!-- <string name="CodePushDeploymentKey" moduleConfig="true" translatable="false">CodePushDeploymentKey</string> -->
+     <!-- <string moduleConfig="true" name="CodePushDeploymentKey">KmOmvzs0oYgl6JRvUEozz92ixZMwOB90-oWNA</string> -->
     <string name="appCenterCrashes_whenToSendCrashes" moduleConfig="true" translatable="false">DO_NOT_ASK_JAVASCRIPT</string>
 <string name="appCenterAnalytics_whenToEnableAnalytics" moduleConfig="true" translatable="false">ALWAYS_SEND</string>
 </resources>

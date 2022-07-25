@@ -16,11 +16,8 @@ target 'CodePushRN' do
 
   pod 'CodePush', :path => '../node_modules/react-native-code-push'
 
-  pod 'appcenter-core', :path => '../node_modules/appcenter'
 
-  pod 'appcenter-analytics', :path => '../node_modules/appcenter-analytics'
 
-  pod 'appcenter-crashes', :path => '../node_modules/appcenter-crashes'
 
   target 'CodePushRNTests' do
     inherit! :complete
