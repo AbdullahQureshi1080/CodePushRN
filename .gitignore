@@ -63,3 +63,10 @@ buck-out/
 .env
 
 
+#CodePushSecret Keys
+
+# Android
+appcenter-config.json
+
+# IOS
+AppCenter-Config.plist
