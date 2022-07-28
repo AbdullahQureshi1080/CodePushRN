@@ -44,6 +44,7 @@ static void InitializeFlipper(UIApplication *application) {
 [AppCenterReactNativeAnalytics registerWithInitiallyEnabled:true];
 [AppCenterReactNativeCrashes registerWithAutomaticProcessing];
 
+
 #endif
 
 

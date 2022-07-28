@@ -71,12 +71,10 @@ const App: () => Node = () => {
           style={{
             backgroundColor: isDarkMode ? Colors.black : Colors.white,
           }}>
-          <Section title="CODE PUSH REACT NATIVE">Over the air updates</Section>
-          <Text>Let's get these updates out in the world</Text>
-          <Text>This is so cool</Text>
-          <Section title="New Build">New Build</Section>
-          <Section title="New Build">New Staging Build</Section>
-          <Section title="New Build">New Production Build</Section>
+          <Section title="CODE PUSH REACT NATIVE">
+            Over the air updates
+            <Text>This is going to be a fresh check</Text>
+          </Section>
         </View>
       </ScrollView>
     </SafeAreaView>
